@@ -1,7 +1,27 @@
 @import "./mixins";
 @import "./colors";
 
-.body {
+body {
     @include body1;
     height: 100%;
+    color: $main-text-color;
+}
+
+.container {
+    max-width: $max-width-desktop;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h3 {
+    @include h3;
+}
+
+p {
+    @include p;
 }
