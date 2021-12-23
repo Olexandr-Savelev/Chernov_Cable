@@ -1,6 +1,5 @@
-.body {
-    margin: 0;
-    overflow: hidden;
-    padding: 0;
-    display: flex;
-}
+@import "./reset";
+@import "./fonts";
+@import "./globals";
+@import "./variables";
+@import "./colors";

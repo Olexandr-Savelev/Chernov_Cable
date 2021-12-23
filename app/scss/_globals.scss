@@ -1,0 +1,7 @@
+@import "./mixins";
+@import "./colors";
+
+.body {
+    @include body1;
+    height: 100%;
+}

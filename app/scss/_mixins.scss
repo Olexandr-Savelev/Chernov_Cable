@@ -1,0 +1,28 @@
+@import "./variables";
+
+@mixin body1 {
+    font-family: "Pragmatica", sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: normal;
+    color: $main-text-color;
+}
+
+@mixin h2 {
+    font-family: "Pragmatica", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    color: $main-text-color;
+}
+
+@mixin p {
+    font-family: "Pragmatica", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: $main-text-color;
+}
