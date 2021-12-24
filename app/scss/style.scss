@@ -1,21 +1,18 @@
-@import "./reset";
-@import "./fonts";
-@import "./globals";
-@import "./variables";
-@import "./colors";
-@import "./mixins";
+@import './reset';
+@import './fonts';
+@import './globals';
+@import './variables';
+@import './colors';
+@import './mixins';
 
 .header {
-    position: sticky;
-    top: 0;
-    padding-bottom: 15px;
     background-color: $black-color;
     width: 100%;
     z-index: 999;
 
     &__logo-wrap {
         width: 94px;
-        padding: 30px 0;
+        padding: 30px 0 10px;
         margin: 0 auto;
     }
 
@@ -26,11 +23,18 @@
 }
 
 .nav {
+    position: relative;
     max-width: 1287px;
-    padding: 0 20px;
     display: flex;
     margin: 0 auto;
     color: $secondary-text-color;
+
+    &__sticky-wrapper {
+        background-color: $black-color;
+        padding: 20px 0 15px;
+        position: sticky;
+        top: 0;
+    }
 
     &__list {
         display: flex;
@@ -46,12 +50,18 @@
     }
 
     &__search > img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
         width: 22px;
         height: 22px;
     }
 
     &__lang {
         text-transform: uppercase;
+        line-height: 21px;
     }
 }
 
@@ -126,7 +136,7 @@
 
     &__bottom::before {
         position: absolute;
-        content: "";
+        content: '';
         top: 0;
         left: 0;
         height: 1px;
