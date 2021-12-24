@@ -8,6 +8,15 @@
     color: $main-text-color;
 }
 
+@mixin h2 {
+    font-family: "Pragmatica", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: $white-color;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
 @mixin h3 {
     font-family: "Pragmatica", sans-serif;
     font-style: normal;
@@ -25,4 +34,11 @@
     font-size: 18px;
     line-height: 27px;
     color: $main-text-color;
+}
+
+@mixin mb {
+    margin-bottom: 40px;
+    @media (min-width: $breakpoint-tablet) {
+        margin-bottom: 60px;
+    }
 }
