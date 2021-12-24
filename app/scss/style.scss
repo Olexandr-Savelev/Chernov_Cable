@@ -57,7 +57,7 @@
 }
 
 .hero {
-    @include mb;
+    padding-top: 0;
 
     &__wrapper {
         max-width: 1440px;
@@ -89,10 +89,6 @@
         color: #56ccf2;
         padding-bottom: 70px;
     }
-}
-
-.info {
-    @include mb;
 }
 
 .footer {

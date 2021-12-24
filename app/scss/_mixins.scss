@@ -35,10 +35,3 @@
     line-height: 27px;
     color: $main-text-color;
 }
-
-@mixin mb {
-    margin-bottom: 40px;
-    @media (min-width: $breakpoint-tablet) {
-        margin-bottom: 60px;
-    }
-}
