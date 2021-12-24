@@ -6,13 +6,12 @@
 @import "./mixins";
 
 .header {
-    z-index: 999;
-
-    position: fixed;
+    position: sticky;
     top: 0;
     padding-bottom: 15px;
     background-color: $black-color;
     width: 100%;
+    z-index: 999;
 
     &__logo-wrap {
         width: 94px;
