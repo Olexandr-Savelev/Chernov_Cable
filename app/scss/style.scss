@@ -1,9 +1,9 @@
-@import './reset';
-@import './fonts';
-@import './globals';
-@import './variables';
-@import './colors';
-@import './mixins';
+@import "./reset";
+@import "./fonts";
+@import "./globals";
+@import "./variables";
+@import "./colors";
+@import "./mixins";
 
 .header {
     background-color: $black-color;
@@ -136,11 +136,61 @@
 
     &__bottom::before {
         position: absolute;
-        content: '';
+        content: "";
         top: 0;
         left: 0;
         height: 1px;
         width: 100%;
         background-color: $secondary-text-color;
+    }
+}
+
+.products {
+    &__cards {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 240px);
+        gap: 30px;
+    }
+
+    &__card {
+        position: relative;
+        border: solid 2px #e0e0e0;
+        overflow: hidden;
+    }
+
+    &__card > img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 180px;
+        width: auto;
+    }
+
+    div {
+        &:nth-of-type(1) {
+            color: #437b50;
+        }
+
+        &:nth-of-type(2) {
+            color: #80858c;
+        }
+
+        &:nth-of-type(3) {
+            color: #7d3461;
+        }
+
+        &:nth-of-type(4) {
+            color: #d9b700;
+        }
+
+        &:nth-of-type(5) {
+            color: #9c9c9c;
+        }
+
+        &:nth-of-type(6) {
+            color: #000000;
+        }
     }
 }

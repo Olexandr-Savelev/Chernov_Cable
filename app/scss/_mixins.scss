@@ -27,6 +27,18 @@
     color: $main-text-color;
 }
 
+@mixin h4 {
+    font-family: "Pragmatica", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 26px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
 @mixin p {
     font-family: "Pragmatica", sans-serif;
     font-style: normal;
