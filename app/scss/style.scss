@@ -147,17 +147,11 @@
 
 .products {
     &__cards {
-        margin-top: 30px;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 240px);
-        gap: 30px;
+        @include cards;
     }
 
     &__card {
-        position: relative;
-        border: solid 2px #e0e0e0;
-        overflow: hidden;
+        @include card;
     }
 
     &__card > img {
@@ -192,5 +186,33 @@
         &:nth-of-type(6) {
             color: #000000;
         }
+    }
+}
+
+.cables {
+    &__cards {
+        @include cards;
+    }
+
+    &__card {
+        @include card;
+    }
+
+    &__card > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    h4 {
+        font-size: 16px;
+        line-height: 18px;
+        color: $white-color;
+        text-transform: none;
+        max-width: 225px;
+        padding: 0;
+        position: absolute;
+        top: 30px;
+        left: 30px;
     }
 }
