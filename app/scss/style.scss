@@ -1,13 +1,14 @@
-@import './reset';
-@import './fonts';
-@import './globals';
-@import './variables';
-@import './colors';
-@import './mixins';
+@import "./reset";
+@import "./fonts";
+@import "./globals";
+@import "./variables";
+@import "./colors";
+@import "./mixins";
 
 .header {
     background-color: $black-color;
     width: 100%;
+    display: none;
 
     &__logo-wrap {
         width: 94px;
@@ -22,6 +23,7 @@
 }
 
 .nav {
+    display: none;
     position: relative;
     max-width: 1287px;
     display: flex;
@@ -29,6 +31,8 @@
     color: $secondary-text-color;
 
     &__sticky-wrapper {
+        display: none;
+
         background-color: $black-color;
         padding: 20px 0 15px;
         position: sticky;
@@ -78,9 +82,11 @@
     }
 
     &__heading {
-        padding-top: 398px;
-        font-size: 40px;
-        line-height: 44px;
+        padding-top: 204px;
+
+        @media (min-width: $breakpoint-tablet) {
+            padding-top: 398px;
+        }
     }
 
     &__heading-mod {
@@ -96,18 +102,31 @@
     &__link {
         display: block;
         color: #56ccf2;
-        padding-bottom: 70px;
+        padding-bottom: 32px;
+
+        @media (min-width: $breakpoint-tablet) {
+            padding-bottom: 70px;
+        }
     }
 }
 
 .footer {
     background-color: $black-color;
     color: $secondary-text-color;
+    padding-top: 40px;
+
+    @media (min-width: $breakpoint-mobile) {
+        padding-top: 0px;
+    }
 
     &__top {
-        position: relative;
-        display: flex;
-        padding: 30px 0;
+        display: block;
+
+        @media (min-width: $breakpoint-mobile) {
+            position: relative;
+            display: flex;
+            padding: 30px 0;
+        }
     }
 
     &__link:not(:last-child) {
@@ -116,12 +135,25 @@
     }
 
     &__list-right {
-        margin-left: 193px;
+        margin-top: 40px;
+
+        @media (min-width: $breakpoint-mobile) {
+            margin-left: 193px;
+            margin-top: 0px;
+        }
     }
 
     &__social {
+        margin-top: 40px;
         display: flex;
-        margin-left: 60px;
+        margin-left: 0px;
+        margin-bottom: 40px;
+
+        @media (min-width: $breakpoint-mobile) {
+            margin-top: 0px;
+            margin-left: 60px;
+            margin-bottom: 0px;
+        }
     }
 
     &__social-link:not(:first-child) {
@@ -136,7 +168,7 @@
 
     &__bottom::before {
         position: absolute;
-        content: '';
+        content: "";
         top: 0;
         left: 0;
         height: 1px;
@@ -218,7 +250,11 @@
 }
 
 .news {
-    margin-bottom: 90px;
+    margin-bottom: 60px;
+
+    @media (min-width: $breakpoint-mobile) {
+        margin-bottom: 90px;
+    }
 
     h3 {
         margin-bottom: 30px;
@@ -230,9 +266,19 @@
     }
 
     &__cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
+        display: block;
+
+        @media (min-width: $breakpoint-mobile) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        @media (min-width: $breakpoint-laptop) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
 
         h4 {
             font-size: 20px;
@@ -244,22 +290,33 @@
         }
 
         ._big {
-            display: flex;
-            background-color: $card-background-color;
-            grid-column-start: 1;
-            grid-column-end: 4;
-            order: -1;
+            display: block;
+
+            @media (min-width: $breakpoint-laptop) {
+                display: flex;
+                background-color: $card-background-color;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                order: -1;
+            }
         }
     }
 
     &__card {
         background-color: $card-background-color;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+
+        @media (min-width: $breakpoint-mobile) {
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
     }
 
     &__text {
         max-width: 240px;
         margin: 30px 0 0 30px;
-        
+
         ._big & {
             max-width: 263px;
         }
@@ -270,10 +327,17 @@
         font-size: 16px;
         line-height: 22px;
         margin-top: 83px;
-        margin-bottom: 30px;
+
+        @media (min-width: $breakpoint-mobile) {
+            margin-bottom: 30px;
+        }
 
         ._big & {
-            margin-top: 153px;
+            margin-top: 83px;
+
+            @media (min-width: $breakpoint-laptop) {
+                margin-top: 153px;
+            }
         }
     }
 }

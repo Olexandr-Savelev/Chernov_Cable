@@ -15,16 +15,28 @@
     color: $white-color;
     text-transform: uppercase;
     margin-bottom: 10px;
+    font-size: 28px;
+    line-height: 30px;
+
+    @media (min-width: $breakpoint-mobile) {
+        font-size: 40px;
+        line-height: 44px;
+    }
 }
 
 @mixin h3 {
     font-family: "Pragmatica", sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 32px;
-    line-height: 35px;
+    font-size: 28px;
+    line-height: 30px;
     margin-bottom: 10px;
     color: $main-text-color;
+
+    @media (min-width: $breakpoint-mobile) {
+        font-size: 32px;
+        line-height: 35px;
+    }
 }
 
 @mixin h4 {
@@ -43,16 +55,41 @@
     font-family: "Pragmatica", sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 16px;
+    line-height: 24px;
     color: $main-text-color;
+
+    @media (min-width: $breakpoint-mobile) {
+        font-size: 18px;
+        line-height: 27px;
+    }
 }
 
 @mixin cards {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    display: block;
+    width: 300px;
+    margin: 30px auto;
+
+    @media (min-width: $breakpoint-mobile) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        width: auto;
+        margin-top: 30px;
+    }
+
+    @media (min-width: $breakpoint-tablet) {
+        display: grid;
+        grid-template-columns: repeat(2, 255px);
+        gap: 30px 100px;
+        justify-content: center;
+    }
+
+    @media (min-width: $breakpoint-laptop) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
 }
 
 @mixin card {
@@ -60,4 +97,15 @@
     border: solid 2px #e0e0e0;
     overflow: hidden;
     height: 240px;
+    display: block;
+    margin-bottom: 20px;
+
+    @media (min-width: $breakpoint-mobile) {
+        margin-bottom: 0px;
+        height: 200px;
+    }
+
+    @media (min-width: $breakpoint-laptop) {
+        height: 240px;
+    }
 }
