@@ -305,18 +305,6 @@
             padding: 0;
             margin: 0 0 15px 0;
         }
-
-        ._big {
-            display: block;
-
-            @media (min-width: $breakpoint-laptop) {
-                display: flex;
-                background-color: $card-background-color;
-                grid-column-start: 1;
-                grid-column-end: 4;
-                order: -1;
-            }
-        }
     }
 
     &__card {
@@ -324,6 +312,7 @@
         background-color: $card-background-color;
         padding-bottom: 30px;
         margin-bottom: 30px;
+        cursor: pointer;
 
         @media (min-width: $breakpoint-mobile) {
             margin-bottom: 0px;
@@ -336,12 +325,39 @@
                 transition: all 0.3s;
             }
         }
-    }
 
-    ._big img {
-        @media (min-width: $breakpoint-laptop) {
-            min-width: 630px;
-            height: 100%;
+        &:first-child {
+            display: block;
+
+            @media (min-width: $breakpoint-laptop) {
+                display: flex;
+                background-color: $card-background-color;
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+
+            img {
+                @media (min-width: $breakpoint-laptop) {
+                    min-width: 630px;
+                    height: 100%;
+                }
+            }
+
+            .news__text {
+                @media (min-width: $breakpoint-laptop) {
+                    max-width: 263px;
+                }
+            }
+            .news__date {
+                margin-top: 83px;
+
+                @media (min-width: $breakpoint-laptop) {
+                    margin-top: 153px;
+                }
+            }
+            .news__link {
+                display: block;
+            }
         }
     }
 
@@ -351,12 +367,6 @@
 
         @media (min-width: $breakpoint-tablet) {
             margin: 30px 15px 15px 30px;
-        }
-
-        ._big & {
-            @media (min-width: $breakpoint-laptop) {
-                max-width: 263px;
-            }
         }
     }
 
@@ -368,14 +378,6 @@
 
         @media (min-width: $breakpoint-mobile) {
             margin-bottom: 30px;
-        }
-
-        ._big & {
-            margin-top: 83px;
-
-            @media (min-width: $breakpoint-laptop) {
-                margin-top: 153px;
-            }
         }
     }
 
@@ -396,10 +398,6 @@
             &:hover {
                 background-size: 100% 1px;
             }
-        }
-
-        ._big & {
-            display: block;
         }
     }
 }
